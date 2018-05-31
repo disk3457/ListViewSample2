@@ -1,5 +1,6 @@
 package com.websarva.wings.android.listviewsample2;
 
+import android.app.LauncherActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -34,5 +35,9 @@ public class ListViewSample2Activity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(ListViewSample2Activity.this,android.R.layout.simple_list_item_1, menuList);
 
         lvMenu.setAdapter(adapter);
+
+        lvMenu.setOnItemClickListener(new ListItemClickListener());
     }
+
+    
 }
